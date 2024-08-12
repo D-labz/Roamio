@@ -2,23 +2,26 @@ import { useState } from "react";
 //import "./App.css";
 
 // Pages
-import AboutPage from "./Pages/AddPage";
 import AddPage from "./Pages/AddPage";
 import DetailsPage from "./Pages/DetailsPage";
 import EditPage from "./Pages/EditPage";
 import ErrorPage from "./Pages/ErrorPage";
 import FavoritesPage from "./Pages/FavoritesPage";
 import Homepage from "./Pages/Homepage";
-import AboutPage from "./Pages/AboutPage";
+import AboutPage from "./Pages/About";
 
-Components;
+// Components
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import DestinationCard from "./components/DestinationCard";
 import Filter from "./components/Filter";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <h1>App</h1>
+    </>
+  );
 }
 
 export default App;
