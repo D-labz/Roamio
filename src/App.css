@@ -43,7 +43,7 @@
 }
 */
 
-.footer {
+/* .footer {
   background-color: #889baf;
   margin: 0;
   padding: 0;
@@ -61,4 +61,9 @@
   justify-content: center;
   padding-top: 8px;
   font-size: 20px;
+} */
+
+.card-layout {
+  height: 100vh;
+  width: calc(100vw - 250px);
 }

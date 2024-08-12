@@ -1,23 +1,30 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+import lostImg from "../assets/lost.png";
 
 export default function ErrorPage() {
   const navigate = useNavigate();
+
   const handleNavigate = () => {
-    navigate("/Homepage");
+    navigate("/");
   };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "90vh",
-        gap: "50px",
-      }}
-    >
-      <button onClick={handleNavigate}>Return to Homepage</button>
+    <div style={{}}>
+      <div>
+        <img
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "90vh",
+            position: "absolute",
+            top: "40px",
+            left: "275px",
+          }}
+          src={lostImg}
+          alt="Not found Page"
+        />
+      </div>
     </div>
   );
 }

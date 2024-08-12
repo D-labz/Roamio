@@ -1,1 +1,1 @@
-import DestinationCard from "./DestinationCard.jsx";
+//import DestinationCard from "./DestinationCard.jsx";
