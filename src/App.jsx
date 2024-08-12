@@ -19,7 +19,7 @@ import Filter from "./components/Filter";
 function App() {
   return (
     <>
-      <h1>App</h1>
+      <Sidebar />
     </>
   );
 }
