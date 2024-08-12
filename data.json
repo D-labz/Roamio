@@ -1,276 +1,278 @@
-[
-  {
-    "id": 0,
-    "name": "Mt. Everest, Nepal",
-    "type": "mountains",
-    "img": "https://media.cntraveler.com/photos/5939654cb5eac72bc406887e/16:9/w_2560%2Cc_limit/GettyImages-451343759.jpg",
-    "activities": "Trekking, Yak Riding, Visit Monasteries",
-    "description": "the highest point on Earth, rises above the clouds at 8,848.86 meters (29,031.7  feet), offering a breathtaking view of the world",
-    "budget-style": "$$$$",
-    "food": "Thakali, MOMO, Gundruk"
-  },
+{
+  "locations": [
+    {
+      "id": 0,
+      "name": "Mt. Everest, Nepal",
+      "type": "mountains",
+      "img": "https://media.cntraveler.com/photos/5939654cb5eac72bc406887e/16:9/w_2560%2Cc_limit/GettyImages-451343759.jpg",
+      "activities": "Trekking, Yak Riding, Visit Monasteries",
+      "description": "the highest point on Earth, rises above the clouds at 8,848.86 meters (29,031.7  feet), offering a breathtaking view of the world",
+      "budgetStyle": 4,
+      "food": "Thakali, MOMO, Gundruk"
+    },
 
-  {
-    "id": 1,
-    "name": "Mt. Annapurna, Nepal",
-    "type": "mountains",
-    "img": "https://cdn.pixabay.com/photo/2023/01/12/11/46/himalayas-7713959_640.jpg",
-    "activities": "Trekking, Skiing, Visit Local Villages",
-    "description": "a towering, majestic peak in the Himalayas, renowned for its dramatic and rugged beauty, standing at 8,091 meters (26,545 feet) above sea level.",
-    "budget-style": "$$$",
-    "food": "yak meat, thakali, Sel Roti"
-  },
+    {
+      "id": 1,
+      "name": "Mt. Annapurna, Nepal",
+      "type": "mountains",
+      "img": "https://cdn.pixabay.com/photo/2023/01/12/11/46/himalayas-7713959_640.jpg",
+      "activities": "Trekking, Skiing, Visit Local Villages",
+      "description": "a towering, majestic peak in the Himalayas, renowned for its dramatic and rugged beauty, standing at 8,091 meters (26,545 feet) above sea level.",
+      "budgetStyle": 3,
+      "food": "yak meat, thakali, Sel Roti"
+    },
 
-  {
-    "id": 2,
-    "name": "Mount Fuji, Japan",
-    "type": "mountains",
-    "img": "https://www.tripsavvy.com/thmb/qFqPcg6Wo24Hu4fLokNfAZdC-xQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fuji-mountain-in-autumn-822273028-5a6a8a9c3418c600363958d3.jpg",
-    "activities": "Trekking, Visit Fuji Five Lakes, Explore Hakone",
-    "description": "Japan's iconic, perfectly symmetrical stratovolcano, soaring gracefully to 3,776 meters and symbolizing natural beauty and cultural significance.",
-    "budget-style": "$$$",
-    "food": "miso soup, yakisoba, ramen"
-  },
+    {
+      "id": 2,
+      "name": "Mount Fuji, Japan",
+      "type": "mountains",
+      "img": "https://www.tripsavvy.com/thmb/qFqPcg6Wo24Hu4fLokNfAZdC-xQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fuji-mountain-in-autumn-822273028-5a6a8a9c3418c600363958d3.jpg",
+      "activities": "Trekking, Visit Fuji Five Lakes, Explore Hakone",
+      "description": "Japan's iconic, perfectly symmetrical stratovolcano, soaring gracefully to 3,776 meters and symbolizing natural beauty and cultural significance.",
+      "budgetStyle": 3,
+      "food": "miso soup, yakisoba, ramen"
+    },
 
-  {
-    "id": 3,
-    "name": "Mt. Matterhorn, Switzerland",
-    "type": "mountains",
-    "img": "https://nypost.com/wp-content/uploads/sites/2/2019/07/travel-matterhorn-mountain.jpg?quality=75&strip=all",
-    "activities": "trekking, snowboarding, skiing",
-    "description": "Striking, pyramid-shaped peak in the Swiss Alps, famed for its dramatic profile and towering presence at 4,478 meters.",
-    "budget-style": "$$$",
-    "food": "fondue, raclette, rosti"
-  },
+    {
+      "id": 3,
+      "name": "Mt. Matterhorn, Switzerland",
+      "type": "mountains",
+      "img": "https://nypost.com/wp-content/uploads/sites/2/2019/07/travel-matterhorn-mountain.jpg?quality=75&strip=all",
+      "activities": "trekking, snowboarding, skiing",
+      "description": "Striking, pyramid-shaped peak in the Swiss Alps, famed for its dramatic profile and towering presence at 4,478 meters.",
+      "budgetStyle": 3,
+      "food": "fondue, raclette, rosti"
+    },
 
-  {
-    "id": 4,
-    "name": "Mt. Robson, Canada",
-    "type": "mountain",
-    "img": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1m2440-mt-robson-in-fall-ed-cooper-photography.jpg",
-    "activities": "trekking, Backcountry Skiing, Scenic Drives",
-    "description": "Canada's highest peak, renowned for its towering, snow-capped summit and dramatic vertical relief in the rugged Canadian Rockies.",
-    "budget-style": "$$",
-    "food": "elk stew, bison burgers, and berry pies"
-  },
+    {
+      "id": 4,
+      "name": "Mt. Robson, Canada",
+      "type": "mountain",
+      "img": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1m2440-mt-robson-in-fall-ed-cooper-photography.jpg",
+      "activities": "trekking, Backcountry Skiing, Scenic Drives",
+      "description": "Canada's highest peak, renowned for its towering, snow-capped summit and dramatic vertical relief in the rugged Canadian Rockies.",
+      "budgetStyle": 2,
+      "food": "elk stew, bison burgers, and berry pies"
+    },
 
-  {
-    "id": 5,
-    "name": "Sahara Desert, Africa",
-    "type": "desert",
-    "img": "https://sevennaturalwonders.org/wp-content/uploads/2023/11/Sahara-Desert-sunset.jpg",
-    "activities": "Camel trekking, desert camping, Hot air Ballooning",
-    "description": "a vast and arid expanse of golden sand dunes and rugged terrain, stretching across North Africa with an awe-inspiring, desolate beauty.",
-    "budget-style": "$$",
-    "food": "tagine (a slow-cooked stew), Brik, Mechoui"
-  },
+    {
+      "id": 5,
+      "name": "Sahara Desert, Africa",
+      "type": "desert",
+      "img": "https://sevennaturalwonders.org/wp-content/uploads/2023/11/Sahara-Desert-sunset.jpg",
+      "activities": "Camel trekking, desert camping, Hot air Ballooning",
+      "description": "a vast and arid expanse of golden sand dunes and rugged terrain, stretching across North Africa with an awe-inspiring, desolate beauty.",
+      "budgetStyle": 2,
+      "food": "tagine (a slow-cooked stew), Brik, Mechoui"
+    },
 
-  {
-    "id": 6,
-    "name": "Antartica",
-    "type": "desert",
-    "img": "https://cdn.mappr.co/wp-content/uploads/2023/04/group-curious-gentoo-penguin-staring-camera-1416843179.jpg",
-    "activities": "Glacier Hiking, Wildlife Watching, Ice Climbing",
-    "description": "vast, icy wilderness at the Earth's southernmost point, characterized by its extreme cold, pristine landscapes, and unique ecosystems.",
-    "budget-style": "$$$$",
-    "food": "preserved meats, dried fruits, instant soups"
-  },
+    {
+      "id": 6,
+      "name": "Antartica",
+      "type": "desert",
+      "img": "https://cdn.mappr.co/wp-content/uploads/2023/04/group-curious-gentoo-penguin-staring-camera-1416843179.jpg",
+      "activities": "Glacier Hiking, Wildlife Watching, Ice Climbing",
+      "description": "vast, icy wilderness at the Earth's southernmost point, characterized by its extreme cold, pristine landscapes, and unique ecosystems.",
+      "budgetStyle": 4,
+      "food": "preserved meats, dried fruits, instant soups"
+    },
 
-  {
-    "id": 7,
-    "name": "Gobi Desert, Mongolia",
-    "type": "desert",
-    "img": "https://www.youngpioneertours.com/wp-content/uploads/2020/01/Oasis-Gobi-Desert.jpg",
-    "activities": "Camel trekking, Sand Dune Climbing, Visit Dinosaur Fossil Sites",
-    "description": "expanse in northern China and southern Mongolia, characterized by its harsh climate, diverse landscapes, and unique flora and fauna.",
-    "budget-style": "$$$",
-    "food": "mutton stew, Mongolian BBQ, milk tea"
-  },
+    {
+      "id": 7,
+      "name": "Gobi Desert, Mongolia",
+      "type": "desert",
+      "img": "https://www.youngpioneertours.com/wp-content/uploads/2020/01/Oasis-Gobi-Desert.jpg",
+      "activities": "Camel trekking, Sand Dune Climbing, Visit Dinosaur Fossil Sites",
+      "description": "expanse in northern China and southern Mongolia, characterized by its harsh climate, diverse landscapes, and unique flora and fauna.",
+      "budgetStyle": 3,
+      "food": "mutton stew, Mongolian BBQ, milk tea"
+    },
 
-  {
-    "id": 8,
-    "name": "Arabian Desert, Saudi Arabia",
-    "type": "desert",
-    "img": "https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Arabian-Desert-Cover-20210517.jpg",
-    "activities": "Dune Bashing, Bedouin Culture Tours, Camel rides",
-    "description": "vast, arid expanse covering much of the Arabian Peninsula, known for its sweeping sand dunes, harsh climate, and rich cultural heritage.",
-    "budget-style": "$$",
-    "food": "shawarma, hummus, falafel"
-  },
+    {
+      "id": 8,
+      "name": "Arabian Desert, Saudi Arabia",
+      "type": "desert",
+      "img": "https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Arabian-Desert-Cover-20210517.jpg",
+      "activities": "Dune Bashing, Bedouin Culture Tours, Camel rides",
+      "description": "vast, arid expanse covering much of the Arabian Peninsula, known for its sweeping sand dunes, harsh climate, and rich cultural heritage.",
+      "budgetStyle": 2,
+      "food": "shawarma, hummus, falafel"
+    },
 
-  {
-    "id": 9,
-    "name": "Great Australian Desert, Australia",
-    "type": "desert",
-    "img": "https://qph.cf2.quoracdn.net/main-qimg-c21239ae953f733a1230827590f26bdd",
-    "activities": "Stargazing, Bushwalking, 4WD Adventures",
-    "description": "vast, arid region comprising multiple deserts, known for its harsh environment, unique wildlife, and rich Aboriginal cultural heritage.",
-    "budget-style": "$$$",
-    "food": "Damper, Bush Tomatoes, Kangaroo Meat"
-  },
+    {
+      "id": 9,
+      "name": "Great Australian Desert, Australia",
+      "type": "desert",
+      "img": "https://qph.cf2.quoracdn.net/main-qimg-c21239ae953f733a1230827590f26bdd",
+      "activities": "Stargazing, Bushwalking, 4WD Adventures",
+      "description": "vast, arid region comprising multiple deserts, known for its harsh environment, unique wildlife, and rich Aboriginal cultural heritage.",
+      "budgetStyle": 3,
+      "food": "Damper, Bush Tomatoes, Kangaroo Meat"
+    },
 
-  {
-    "id": 10,
-    "name": "Maldives",
-    "type": "beach",
-    "img": "https://media.nomadicmatt.com/2023/maldivesbudget1.jpg",
-    "activities": "plankton, snorkeling, water-sports",
-    "description": "turquoise lagoons with crystal clear water protected by reefs that house unique and spectacular marine life.",
-    "budget-style": "$$$$",
-    "food": "garudhiya, mas huni, boshi mashuni"
-  },
+    {
+      "id": 10,
+      "name": "Maldives",
+      "type": "beach",
+      "img": "https://media.nomadicmatt.com/2023/maldivesbudget1.jpg",
+      "activities": "plankton, snorkeling, water-sports",
+      "description": "turquoise lagoons with crystal clear water protected by reefs that house unique and spectacular marine life.",
+      "budgetStyle": 4,
+      "food": "garudhiya, mas huni, boshi mashuni"
+    },
 
-  {
-    "id": 11,
-    "name": "French Polynesia",
-    "type": "beach",
-    "img": "https://media.tacdn.com/media/attractions-content--1x-1/12/5f/b9/56.jpg",
-    "activities": "lagoonarium, belvedere lookout, water gardens",
-    "description": "a stunning overseas collectivity of France located in the South Pacific Ocean. Comprising 118 islands and atolls, it's known for its vibrant marine life, crystal-clear lagoons, and lush mountainous landscapes.",
-    "budget-style": "$$$$",
-    "food": "Firi firi, fafaru, ahima"
-  },
+    {
+      "id": 11,
+      "name": "French Polynesia",
+      "type": "beach",
+      "img": "https://media.tacdn.com/media/attractions-content--1x-1/12/5f/b9/56.jpg",
+      "activities": "lagoonarium, belvedere lookout, water gardens",
+      "description": "a stunning overseas collectivity of France located in the South Pacific Ocean. Comprising 118 islands and atolls, it's known for its vibrant marine life, crystal-clear lagoons, and lush mountainous landscapes.",
+      "budgetStyle": 4,
+      "food": "Firi firi, fafaru, ahima"
+    },
 
-  {
-    "id": 12,
-    "name": "Phuket",
-    "type": "beach",
-    "img": "https://cdn.kimkim.com/files/a/images/eacf17d718fdb851dcdad16f43b63146444db1b0/original-785bfde7b229078d29dda2791dafc7af.jpg",
-    "activities": "elephant sanctuary, scuba diving, night market",
-    "description": "destination known for its stunning beaches, vibrant nightlife, and rich cultural heritage.",
-    "budget-style": "$$$",
-    "food": "pad thai, fried rice, mango sticky rice"
-  },
+    {
+      "id": 12,
+      "name": "Phuket",
+      "type": "beach",
+      "img": "https://cdn.kimkim.com/files/a/images/eacf17d718fdb851dcdad16f43b63146444db1b0/original-785bfde7b229078d29dda2791dafc7af.jpg",
+      "activities": "elephant sanctuary, scuba diving, night market",
+      "description": "destination known for its stunning beaches, vibrant nightlife, and rich cultural heritage.",
+      "budgetStyle": 3,
+      "food": "pad thai, fried rice, mango sticky rice"
+    },
 
-  {
-    "id": 13,
-    "name": "Punta cana",
-    "type": "beach",
-    "img": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT4YJJa3BCjQ709IWmhn9gqYw9NBLsPKOViMwB3rq7fpnqN4a4fygSef_UZBPwycBL4lnHJKUzX6zvbdfesvMXJ19jLkhPHH9q-QopIkA",
-    "activities": "ecological reserve, bavaro, scape park",
-    "description": "popular resort town located on the easternmost tip of the Dominican Republic, known for its stunning white-sand beaches, crystal-clear turquoise waters, and all-inclusive resorts.",
-    "budget-style": "$$$",
-    "food": "Sancocho, La Bandera, Los Tres Golpes"
-  },
+    {
+      "id": 13,
+      "name": "Punta cana",
+      "type": "beach",
+      "img": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT4YJJa3BCjQ709IWmhn9gqYw9NBLsPKOViMwB3rq7fpnqN4a4fygSef_UZBPwycBL4lnHJKUzX6zvbdfesvMXJ19jLkhPHH9q-QopIkA",
+      "activities": "ecological reserve, bavaro, scape park",
+      "description": "popular resort town located on the easternmost tip of the Dominican Republic, known for its stunning white-sand beaches, crystal-clear turquoise waters, and all-inclusive resorts.",
+      "budgetStyle": 3,
+      "food": "Sancocho, La Bandera, Los Tres Golpes"
+    },
 
-  {
-    "id": 14,
-    "name": "Mykonos, Greece",
-    "type": "beach",
-    "img": "https://www.thediscoveriesof.com/wp-content/uploads/2022/08/Super-Paradise-Beach.jpg",
-    "activities": "matoyianni street, windmills, little Venice",
-    "description": "renowned for its vibrant nightlife, stunning beaches, and charming whitewashed architecture.",
-    "budget-style": "$$",
-    "food": "Moussaka, Kopanisti, Seafood"
-  },
+    {
+      "id": 14,
+      "name": "Mykonos, Greece",
+      "type": "beach",
+      "img": "https://www.thediscoveriesof.com/wp-content/uploads/2022/08/Super-Paradise-Beach.jpg",
+      "activities": "matoyianni street, windmills, little Venice",
+      "description": "renowned for its vibrant nightlife, stunning beaches, and charming whitewashed architecture.",
+      "budgetStyle": 2,
+      "food": "Moussaka, Kopanisti, Seafood"
+    },
 
-  {
-    "id": 15,
-    "name": "Areni Village, Armenia",
-    "type": "rural",
-    "img": "https://cdn.getyourguide.com/img/tour/6405bd44e9a5f.jpeg/68.jpg",
-    "activities": "wine tasting, St. Astvatsatsin (13th-century church), Areni Wine Festival (in October)",
-    "description": "This hidden gem is only an hour and a half from the capital city of Yerevan and boasts the title of 'birthplace of winemaking'! Wander the vineyards, try the local wine, visit the nearby Noravank Monastery, or check out Areni-1 Cave, the oldest winery in the world!",
-    "budget-style": "$$",
-    "food": "delicious local cuisine"
-  },
+    {
+      "id": 15,
+      "name": "Areni Village, Armenia",
+      "type": "rural",
+      "img": "https://cdn.getyourguide.com/img/tour/6405bd44e9a5f.jpeg/68.jpg",
+      "activities": "wine tasting, St. Astvatsatsin (13th-century church), Areni Wine Festival (in October)",
+      "description": "This hidden gem is only an hour and a half from the capital city of Yerevan and boasts the title of 'birthplace of winemaking'! Wander the vineyards, try the local wine, visit the nearby Noravank Monastery, or check out Areni-1 Cave, the oldest winery in the world!",
+      "budgetStyle": 2,
+      "food": "delicious local cuisine"
+    },
 
-  {
-    "id": 16,
-    "name": "Cappadocia, Turkey",
-    "type": "rural",
-    "img": "https://www.onthegotours.com/repository/Cappadocia-Balloons-228661391690774.jpg",
-    "activities": "hiking, hot-air ballooning, exploring ancient rock formations, visiting castles",
-    "description": "This exciting region of Turkey is famous for hot-air ballooning and the ancient rock formations that have developed millions of years ago!",
-    "budget-style": "$$",
-    "food": "delicious local cuisine"
-  },
+    {
+      "id": 16,
+      "name": "Cappadocia, Turkey",
+      "type": "rural",
+      "img": "https://www.onthegotours.com/repository/Cappadocia-Balloons-228661391690774.jpg",
+      "activities": "hiking, hot-air ballooning, exploring ancient rock formations, visiting castles",
+      "description": "This exciting region of Turkey is famous for hot-air ballooning and the ancient rock formations that have developed millions of years ago!",
+      "budgetStyle": 2,
+      "food": "delicious local cuisine"
+    },
 
-  {
-    "id": 17,
-    "name": "Sigangli Cave, China",
-    "type": "rural",
-    "img": "https://www.chinatourismgroup.com/leisure/article/townlet/img/640(27).jpg",
-    "activities": "cave exploring, hiking, walking in the forest",
-    "description": "Within the Nan Rolling River National Nature Reserve lies the incredible Sigangli Cave! Spend the morning exploring the cave, but save time to see the nearby bridge and walk through the forested hills.",
-    "budget-style": "$",
-    "food": "Bring something for lunch!"
-  },
+    {
+      "id": 17,
+      "name": "Sigangli Cave, China",
+      "type": "rural",
+      "img": "https://www.chinatourismgroup.com/leisure/article/townlet/img/640(27).jpg",
+      "activities": "cave exploring, hiking, walking in the forest",
+      "description": "Within the Nan Rolling River National Nature Reserve lies the incredible Sigangli Cave! Spend the morning exploring the cave, but save time to see the nearby bridge and walk through the forested hills.",
+      "budgetStyle": 1,
+      "food": "Bring something for lunch!"
+    },
 
-  {
-    "id": 18,
-    "name": "Rurrenabaque, Bolivia",
-    "type": "rural",
-    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/07/1d/df/caption.jpg?w=500&h=400&s=1",
-    "activities": "rainforest tour, ecotourism, river trips",
-    "description": "Rurrenabaque is nestled in the Bolivian rainforest and offers the chance for memorable ecotourism adventures. Whether your taste is a rainforest excursion, a boat ride on the Yacuma River, or a stay in a charming Bolivian town, Rurrenabaque has something for you!",
-    "budget-style": "$$",
-    "food": "delicious local cuisine"
-  },
+    {
+      "id": 18,
+      "name": "Rurrenabaque, Bolivia",
+      "type": "rural",
+      "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/07/1d/df/caption.jpg?w=500&h=400&s=1",
+      "activities": "rainforest tour, ecotourism, river trips",
+      "description": "Rurrenabaque is nestled in the Bolivian rainforest and offers the chance for memorable ecotourism adventures. Whether your taste is a rainforest excursion, a boat ride on the Yacuma River, or a stay in a charming Bolivian town, Rurrenabaque has something for you!",
+      "budgetStyle": 2,
+      "food": "delicious local cuisine"
+    },
 
-  {
-    "id": 19,
-    "name": "Masai Mara, Kenya",
-    "type": "rural",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTapedmOsZANGq1B1MsOrocbrhoOLsKpM5eWA&s",
-    "activities": "safari",
-    "description": "If you've ever wanted to watch a lioness hunt for her prey, see giraffes running across the plains, or hear zebras bray as they trot along, you simply must come to Masai Mara! Safaris are available to suit any interest!",
-    "budget-style": "$$$$",
-    "food": "delicious local cuisine"
-  },
+    {
+      "id": 19,
+      "name": "Masai Mara, Kenya",
+      "type": "rural",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTapedmOsZANGq1B1MsOrocbrhoOLsKpM5eWA&s",
+      "activities": "safari",
+      "description": "If you've ever wanted to watch a lioness hunt for her prey, see giraffes running across the plains, or hear zebras bray as they trot along, you simply must come to Masai Mara! Safaris are available to suit any interest!",
+      "budgetStyle": 4,
+      "food": "delicious local cuisine"
+    },
 
-  {
-    "id": 20,
-    "name": "Prague, Czechia",
-    "type": "urban",
-    "img": "https://finduslost.com/wp-content/uploads/2020/02/Prague-Travel-Guide-Find-Us-Lost-1050209.jpg",
-    "activities": "staromestske nameste, prague castle, Charles bridge",
-    "description": "famed for its stunning Gothic, Baroque, and Romanesque architecture. The city's centerpiece is the Old Town.",
-    "budget-style": "$$",
-    "food": "scvickova na smetana, trdelnik, vepro knedlo zelo"
-  },
+    {
+      "id": 20,
+      "name": "Prague, Czechia",
+      "type": "urban",
+      "img": "https://finduslost.com/wp-content/uploads/2020/02/Prague-Travel-Guide-Find-Us-Lost-1050209.jpg",
+      "activities": "staromestske nameste, prague castle, Charles bridge",
+      "description": "famed for its stunning Gothic, Baroque, and Romanesque architecture. The city's centerpiece is the Old Town.",
+      "budgetStyle": 2,
+      "food": "scvickova na smetana, trdelnik, vepro knedlo zelo"
+    },
 
-  {
-    "id": 21,
-    "name": "New York City, USA",
-    "type": "urban",
-    "img": "https://americanmind.org/wp-content/uploads/2023/03/GettyImages-1429150390-1024x683.jpg",
-    "activities": "urban exploration, Broadway, museums, shopping, restaurants, most anything modern humans can imagine",
-    "description": "New York City, sometimes referred to as the 'capital of the world' speaks for itself, but you have to come here to experience everything you've always heard about. Some of the world's greatest restaurants, most famous museums, and finest shops are located on the island of Manhattan. Come for Broadway and The Met, but stay for the pizza and the late-night clubs.",
-    "budget-style": "$$$$",
-    "food": "fine dining, delicious local cuisine, pizza"
-  },
+    {
+      "id": 21,
+      "name": "New York City, USA",
+      "type": "urban",
+      "img": "https://americanmind.org/wp-content/uploads/2023/03/GettyImages-1429150390-1024x683.jpg",
+      "activities": "urban exploration, Broadway, museums, shopping, restaurants, most anything modern humans can imagine",
+      "description": "New York City, sometimes referred to as the 'capital of the world' speaks for itself, but you have to come here to experience everything you've always heard about. Some of the world's greatest restaurants, most famous museums, and finest shops are located on the island of Manhattan. Come for Broadway and The Met, but stay for the pizza and the late-night clubs.",
+      "budgetStyle": 4,
+      "food": "fine dining, delicious local cuisine, pizza"
+    },
 
-  {
-    "id": 22,
-    "name": "Vienna, Austria",
-    "type": "urban",
-    "img": "",
-    "activities": "urban exploration, theater/opera, historical sites, museums, wine tasting, coffee houses",
-    "description": "Known as the 'Heart of Europe', Vienna has something to offer any visitor. Whether you want to take in an opera or a play, spend your days inside world-famous museums, or simply sit in a coffee shop and people watch, the streets of Vienna are calling! And just outside of town is the famous wine country of Kahlenberg, where you can sample the local wines as you look out over the vineyards.",
-    "budget-style": "$$$",
-    "food": "fine dining, delicious local cuisine"
-  },
+    {
+      "id": 22,
+      "name": "Vienna, Austria",
+      "type": "urban",
+      "img": "",
+      "activities": "urban exploration, theater/opera, historical sites, museums, wine tasting, coffee houses",
+      "description": "Known as the 'Heart of Europe', Vienna has something to offer any visitor. Whether you want to take in an opera or a play, spend your days inside world-famous museums, or simply sit in a coffee shop and people watch, the streets of Vienna are calling! And just outside of town is the famous wine country of Kahlenberg, where you can sample the local wines as you look out over the vineyards.",
+      "budgetStyle": 3,
+      "food": "fine dining, delicious local cuisine"
+    },
 
-  {
-    "id": 23,
-    "name": "Tokyo, Japan",
-    "type": "urban",
-    "img": "",
-    "activities": "Visit the Imperial Palace, Visit TeamLab Borderless, Explore Akihabara",
-    "description": "A dynamic metropolis blending ultramodern skyscrapers with historic temples, offering a rich tapestry of culture, technology, and tradition.",
-    "budget-style": "$$$",
-    "food": "sushi, ramen, tempura"
-  },
+    {
+      "id": 23,
+      "name": "Tokyo, Japan",
+      "type": "urban",
+      "img": "",
+      "activities": "Visit the Imperial Palace, Visit TeamLab Borderless, Explore Akihabara",
+      "description": "A dynamic metropolis blending ultramodern skyscrapers with historic temples, offering a rich tapestry of culture, technology, and tradition.",
+      "budgetStyle": 3,
+      "food": "sushi, ramen, tempura"
+    },
 
-  {
-    "id": 24,
-    "name": "Lisbon, Portugal",
-    "type": "urban",
-    "img": "https://www.collegiate-ac.pt/propeller/uploads/sites/4/2020/11/ruas-mais-bonitas-de-lisboa-1-1450x967.jpg",
-    "activities": "Explore Belém, Wander Alfama, Ride Tram 28, Explore Sintra, Attend a Fado Performance",
-    "description": "Lisbon is a vibrant, sun-kissed city with a rich blend of historic charm, colorful architecture, and a lively cultural scene set along the scenic Tagus River",
-    "budget-style": "$$",
-    "food": "Pastéis de Nata, Bacalhau à Brás, Bifana, Arroz de Marisco"
-  }
-]
+    {
+      "id": 24,
+      "name": "Lisbon, Portugal",
+      "type": "urban",
+      "img": "https://www.collegiate-ac.pt/propeller/uploads/sites/4/2020/11/ruas-mais-bonitas-de-lisboa-1-1450x967.jpg",
+      "activities": "Explore Belém, Wander Alfama, Ride Tram 28, Explore Sintra, Attend a Fado Performance",
+      "description": "Lisbon is a vibrant, sun-kissed city with a rich blend of historic charm, colorful architecture, and a lively cultural scene set along the scenic Tagus River",
+      "budgetStyle": 2,
+      "food": "Pastéis de Nata, Bacalhau à Brás, Bifana, Arroz de Marisco"
+    }
+  ]
+}
