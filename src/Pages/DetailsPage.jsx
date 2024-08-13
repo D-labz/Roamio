@@ -13,7 +13,9 @@ export default function DetailsPage(locations) {
     console.error("locationArray is not an array");
     return <div>Error: Locations data is invalid</div>;
   }
-
+  const Favorites = () => {
+    navigate("/FavoritesPage");
+  };
   // If your location IDs are numbers, convert locationId to a number
   const location = locationArray.find(
     (location) => location.id === parseInt(locationId)
@@ -58,6 +60,7 @@ export default function DetailsPage(locations) {
       <p>{location.description}</p>
       <p>{location.food}</p>
       <button onClick={handleNavigate}>Edit</button>
+      <button onClick={Favorites}>:heart:</button>
     </div>
   );
 }
