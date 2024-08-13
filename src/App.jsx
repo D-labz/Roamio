@@ -27,10 +27,9 @@ function App() {
   useEffect(() => {
     axios.get(apiURL).then((response) => {
       setLocations(response.data);
-      setFetching(true);
+      setFetching(false);
     });
   }, []);
-
 
   const createLocation = (newLocation) => {
     console.log(newLocation);
@@ -45,12 +44,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage locations={locations} />} />
         <Route path="/details/:id" element={<DetailsPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/About" element={<AboutPage />} />
         <Route
           path="/add"
           element={<AddPage createLocation={createLocation} />}
         />
-        <Route path="/favourites" element={<FavoritesPage />} />
+        <Route path="/FavoritesPage" element={<FavoritesPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

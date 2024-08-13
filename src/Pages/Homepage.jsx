@@ -57,6 +57,7 @@ export default function Homepage({ locations }) {
                     </div>
                   </div>
                 </Link>
+                
               </div>
             );
           })}
