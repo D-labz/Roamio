@@ -1,20 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
 
-export default function Homepage() {
-  const [locations, setLocations] = useState([]);
-  const [fetching, setFetching] = useState(true);
+import { Link, useNavigate } from "react-router-dom";
 
-  const apiURL = "https://roamio.adaptable.app/locations";
-
-  useEffect(() => {
-    axios.get(apiURL).then((response) => {
-      setLocations(response.data);
-      setFetching(true);
-    });
-  }, []);
+export default function Homepage({ locations }) {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/add");
+  };
 
   return (
     <div>
@@ -22,7 +14,11 @@ export default function Homepage() {
         <h1 style={{ width: "calc(100vw - 180px)", marginLeft: "180px" }}>
           Destinations
         </h1>
-        <button style={{ position: "absolute", right: "100px", top: "45px" }}>
+        <button
+          className="add-btn"
+          onClick={handleNavigate}
+          style={{ position: "absolute", right: "100px", top: "45px" }}
+        >
           Add New Destination
         </button>
       </div>
