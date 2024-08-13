@@ -6,10 +6,27 @@ import {
   useLocation,
 } from "react-router-dom";
 
-export default function DetailsPage() {
-  const pagination = useLocation();
-  const { location } = pagination.state;
+export default function DetailsPage(locations) {
+  const { locationId } = useParams();
+  const locationArray = locations.locations;
+  if (!Array.isArray(locationArray)) {
+    console.error("locationArray is not an array");
+    return <div>Error: Locations data is invalid</div>;
+  }
 
+  // If your location IDs are numbers, convert locationId to a number
+  const location = locationArray.find(
+    (location) => location.id === parseInt(locationId)
+  );
+
+  if (!location) {
+    // If the location is not found, navigate away or show an error message
+    return <Navigate to="/" />;
+  }
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/edit/${location.id}`);
+  };
   return (
     <div
       style={{
@@ -40,7 +57,7 @@ export default function DetailsPage() {
       <p>{location.activities}</p>
       <p>{location.description}</p>
       <p>{location.food}</p>
-      <button>Edit</button>
+      <button onClick={handleNavigate}>Edit</button>
     </div>
   );
 }
