@@ -38,7 +38,7 @@ export default function Homepage({ locations }) {
               <div key={i} style={{ padding: "5px" }}>
                 <Link
                   to={`/details/${location.id}`}
-                  state={{ location: location }}
+                  /* state={{ location: location }} */
                 >
                   <div>
                     <div>
@@ -57,7 +57,6 @@ export default function Homepage({ locations }) {
                     </div>
                   </div>
                 </Link>
-                
               </div>
             );
           })}

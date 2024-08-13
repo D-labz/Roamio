@@ -32,9 +32,6 @@ function App() {
   }, []);
 
   const createLocation = (newLocation) => {
-    console.log(newLocation);
-    console.log(locations);
-
     setLocations([...locations, newLocation]);
   };
 
@@ -43,11 +40,20 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Homepage locations={locations} />} />
-        <Route path="/details/:id" element={<DetailsPage />} />
+        <Route
+          path="/details/:locationId"
+          element={<DetailsPage locations={locations} />}
+        />
         <Route path="/About" element={<AboutPage />} />
         <Route
           path="/add"
           element={<AddPage createLocation={createLocation} />}
+        />
+        <Route
+          path="/edit/:locationId"
+          element={
+            <EditPage locations={locations} setLocations={setLocations} />
+          }
         />
         <Route path="/FavoritesPage" element={<FavoritesPage />} />
         <Route path="*" element={<ErrorPage />} />
