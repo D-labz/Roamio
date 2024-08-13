@@ -9,7 +9,7 @@ export default function AddPage({ createLocation }) {
   const [img, setImg] = useState("");
   const [activities, setActivities] = useState("");
   const [description, setDescription] = useState("");
-  const [budgetStyle, setBudgetStyle] = useState("");
+  const [budgetStyle, setBudgetStyle] = useState(1);
   const [food, setFood] = useState("");
 
   const navigate = useNavigate();

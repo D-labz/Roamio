@@ -10,14 +10,6 @@ export default function DetailsPage() {
   const pagination = useLocation();
   const { location } = pagination.state;
 
-  /*  const handleEditNavigate = () => {
-    navigate(`/${foundLocation.id}/edit`);
-  }; */
-
-  //   if (!foundLocation) {
-  //     return <Navigate to="/error" />;
-  //   }
-
   return (
     <div
       style={{
@@ -48,6 +40,7 @@ export default function DetailsPage() {
       <p>{location.activities}</p>
       <p>{location.description}</p>
       <p>{location.food}</p>
+      <button>Edit</button>
     </div>
   );
 }
