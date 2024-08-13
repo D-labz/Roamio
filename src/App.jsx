@@ -9,7 +9,7 @@ import EditPage from "./Pages/EditPage";
 import ErrorPage from "./Pages/ErrorPage";
 import FavoritesPage from "./Pages/FavoritesPage";
 import Homepage from "./Pages/Homepage";
-import AboutPage from "./Pages/About";
+import AboutPage from "./Pages/AboutPage";
 
 // Components
 import Sidebar from "./components/Sidebar";
@@ -25,6 +25,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </>
   );
