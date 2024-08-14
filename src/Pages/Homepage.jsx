@@ -1,33 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Filter from "../components/Filter";
 
 export default function Homepage({ locations }) {
   const navigate = useNavigate();
-  // const [locations, setLocations] = useState([]);
   const [filter, setFilter] = useState("All");
-
-  /*   useEffect(() => {
-    fetch("https://roamio.adaptable.app/locations")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Fetched Data:", data);
-        setLocations(data);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []); */
 
   const handleNavigate = () => {
     navigate("/add");
   };
-  console.log("Current Filter:", filter);
 
   const filteredLocations = locations.filter((location) => {
-    if (filter === "All") return true; // Showing all locations if "All" is selected
-    return location.type === filter; // Filtering locations by type
+    if (filter === "All") return true;
+    return location.type === filter;
   });
 
-  console.log("Filtered Locations:", filteredLocations);
   return (
     <div>
       <div

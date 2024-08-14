@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
-//import "./App.css";
 
 // Pages
 import AddPage from "./Pages/AddPage";
@@ -15,7 +14,6 @@ import AboutPage from "./Pages/AboutPage";
 // Components
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-//import DestinationCard from "./components/DestinationCard";
 import Filter from "./components/Filter";
 
 function App() {
@@ -31,6 +29,12 @@ function App() {
       setFetching(false);
     });
   }, []);
+
+  const deleteItem = (locationId) => {
+    setFavoriteArr(
+      favoriteArr.filter((location) => location.id !== locationId)
+    );
+  };
 
   const createLocation = (newLocation) => {
     setLocations([...locations, newLocation]);
@@ -65,10 +69,7 @@ function App() {
         <Route
           path="/FavoritesPage"
           element={
-            <FavoritesPage
-              favoriteArr={favoriteArr}
-              setFavoriteArr={setFavoriteArr}
-            />
+            <FavoritesPage favoriteArr={favoriteArr} deleteItem={deleteItem} />
           }
         />
         <Route path="*" element={<ErrorPage />} />

@@ -1,5 +1,4 @@
 import React from "react";
-//import { useNavigate } from "react-router-dom";
 import Costa from "../assets/Costa.webp";
 import Destin from "../assets/Destin.jpeg";
 import Pokhara from "../assets/Pokhara.jpg";

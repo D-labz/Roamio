@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import {
   Navigate,
   useParams,
@@ -15,19 +14,16 @@ export default function DetailsPage({
   const { locationId } = useParams();
 
   const handleAddFavourites = () => {
-    console.log(favoriteArr);
     setFavoriteArr([...favoriteArr, foundLocation]);
-    console.log([...favoriteArr, foundLocation]);
-    //navigate("/FavoritesPage");
+
+    navigate("/FavoritesPage");
   };
-  // If your location IDs are numbers, convert locationId to a number
+
   const foundLocation = locations.find(
     (location) => location.id === parseInt(locationId)
   );
-  console.log(foundLocation);
 
   if (!foundLocation) {
-    // If the location is not found, navigate away or show an error message
     return <Navigate to="/" />;
   }
   const navigate = useNavigate();
