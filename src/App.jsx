@@ -20,6 +20,7 @@ import Filter from "./components/Filter";
 
 function App() {
   const [locations, setLocations] = useState([]);
+  const [favoriteArr, setFavoriteArr] = useState([]);
   const [fetching, setFetching] = useState(true);
 
   const apiURL = "https://roamio.adaptable.app/locations";
@@ -42,7 +43,13 @@ function App() {
         <Route path="/" element={<Homepage locations={locations} />} />
         <Route
           path="/details/:locationId"
-          element={<DetailsPage locations={locations} />}
+          element={
+            <DetailsPage
+              locations={locations}
+              favoriteArr={favoriteArr}
+              setFavoriteArr={setFavoriteArr}
+            />
+          }
         />
         <Route path="/About" element={<AboutPage />} />
         <Route
@@ -55,7 +62,15 @@ function App() {
             <EditPage locations={locations} setLocations={setLocations} />
           }
         />
-        <Route path="/FavoritesPage" element={<FavoritesPage />} />
+        <Route
+          path="/FavoritesPage"
+          element={
+            <FavoritesPage
+              favoriteArr={favoriteArr}
+              setFavoriteArr={setFavoriteArr}
+            />
+          }
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

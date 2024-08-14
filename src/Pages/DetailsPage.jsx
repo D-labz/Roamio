@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Navigate,
   useParams,
@@ -6,28 +7,32 @@ import {
   useLocation,
 } from "react-router-dom";
 
-export default function DetailsPage(locations) {
+export default function DetailsPage({
+  locations,
+  favoriteArr,
+  setFavoriteArr,
+}) {
   const { locationId } = useParams();
-  const locationArray = locations.locations;
-  if (!Array.isArray(locationArray)) {
-    console.error("locationArray is not an array");
-    return <div>Error: Locations data is invalid</div>;
-  }
-  const Favorites = () => {
-    navigate("/FavoritesPage");
+
+  const handleAddFavourites = () => {
+    console.log(favoriteArr);
+    setFavoriteArr([...favoriteArr, foundLocation]);
+    console.log([...favoriteArr, foundLocation]);
+    //navigate("/FavoritesPage");
   };
   // If your location IDs are numbers, convert locationId to a number
-  const location = locationArray.find(
+  const foundLocation = locations.find(
     (location) => location.id === parseInt(locationId)
   );
+  console.log(foundLocation);
 
-  if (!location) {
+  if (!foundLocation) {
     // If the location is not found, navigate away or show an error message
     return <Navigate to="/" />;
   }
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/edit/${location.id}`);
+    navigate(`/edit/${foundLocation.id}`);
   };
   return (
     <div
@@ -44,23 +49,23 @@ export default function DetailsPage(locations) {
       }}
     >
       <img
-        src={location.img}
+        src={foundLocation.img}
         style={{
           height: "500px",
           width: "600px",
         }}
-        alt={`image of" + ${location.name}`}
+        alt={`image of" + ${foundLocation.name}`}
       />
-      <p>{location.name}</p>
+      <p>{foundLocation.name}</p>
       <p>
-        <em style={{ fontstyle: "italics" }}>{location.type}</em>
+        <em style={{ fontstyle: "italics" }}>{foundLocation.type}</em>
       </p>
-      <p>{location.budgetStyle}</p>
-      <p>{location.activities}</p>
-      <p>{location.description}</p>
-      <p>{location.food}</p>
+      <p>{foundLocation.budgetStyle}</p>
+      <p>{foundLocation.activities}</p>
+      <p>{foundLocation.description}</p>
+      <p>{foundLocation.food}</p>
       <button onClick={handleNavigate}>Edit</button>
-      <button onClick={Favorites}>:heart:</button>
+      <button onClick={handleAddFavourites}>:heart:</button>
     </div>
   );
 }
