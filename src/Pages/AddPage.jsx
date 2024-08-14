@@ -38,16 +38,15 @@ export default function AddPage({ createLocation }) {
       description,
       budgetStyle,
       food,
-      coordinates, // Include coordinates here
+      coordinates, 
     };
 
     axios
       .post("https://roamio.adaptable.app/locations", newLocation)
       .then(function (response) {
-        console.log(response);
 
         createLocation(response.data);
-        // Reset form fields
+        
         setName("");
         setType("");
         setImg("");
@@ -55,7 +54,7 @@ export default function AddPage({ createLocation }) {
         setDescription("");
         setBudgetStyle("");
         setFood("");
-        setCoordinates(""); // Reset coordinates
+        setCoordinates("");
         navigate("/");
       })
       .catch(function (error) {

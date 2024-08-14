@@ -3,85 +3,47 @@ import axios from "axios";
 
 export default function FavoritesPage({ favoriteArr, deleteItem }) {
   const [weatherData, setWeatherData] = useState({});
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchWeatherData = async () => {
-      console.log("favoriteArr:", favoriteArr); // Log the favoriteArr to check its structure
+    favoriteArr.forEach((location) => {
+      // Check if coordinates property exists and is valid
+      if (location.coordinates) {
+        const [latitudeString, longitudeString] =
+          location.coordinates.split(", ");
+        const latitude = parseFloat(latitudeString);
+        const longitude = parseFloat(longitudeString);
 
-      // Check if favoriteArr is an array and has elements
-      if (!Array.isArray(favoriteArr) || favoriteArr.length === 0) return;
+        if (!isNaN(latitude) && !isNaN(longitude)) {
+          const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m&timezone=auto&forecast_days=1`;
 
-      // Filter out locations with missing or invalid coordinates
-      const validLocations = favoriteArr.filter(
-        (location) => location.coordinates
-      );
-
-      console.log("Valid locations:", validLocations); // Log valid locations with coordinates
-
-      if (validLocations.length === 0) {
-        console.log(
-          "No locations with valid coordinates to fetch weather data."
-        );
-        setLoading(false);
-        return;
-      }
-
-      const weatherRequests = validLocations.map(async (location) => {
-        const [latitude, longitude] = location.coordinates
-          .split(", ")
-          .map((coord) => parseFloat(coord));
-
-        console.log(
-          `Parsed coordinates for location ${location.id}:`,
-          latitude,
-          longitude
-        ); // Log parsed coordinates
-
-        if (isNaN(latitude) || isNaN(longitude)) {
-          console.warn(
-            `Location ${location.id} has invalid coordinates: ${location.coordinates}`
-          );
-          return { id: location.id, temperature: null };
+          axios
+            .get(apiUrl)
+            .then((response) => {
+              setWeatherData((prevData) => ({
+                ...prevData,
+                [location.id]: response.data.current.temperature_2m,
+              }));
+            })
+            .catch(() => {
+              setWeatherData((prevData) => ({
+                ...prevData,
+                [location.id]: null,
+              }));
+            });
+        } else {
+          setWeatherData((prevData) => ({
+            ...prevData,
+            [location.id]: null,
+          }));
         }
-
-        const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m&timezone=auto&forecast_days=1`;
-
-        try {
-          const response = await axios.get(apiUrl);
-          console.log(
-            `Weather data for location ${location.id}:`,
-            response.data
-          ); // Log the weather data
-          return {
-            id: location.id,
-            temperature: response.data.current.temperature_2m,
-          };
-        } catch (error) {
-          console.error(
-            `Error fetching weather data for location ${location.id}:`,
-            error
-          );
-          return { id: location.id, temperature: null };
-        }
-      });
-
-      try {
-        const weatherResults = await Promise.all(weatherRequests);
-        console.log("Weather results:", weatherResults); // Log weather results
-        const weatherMap = weatherResults.reduce((acc, { id, temperature }) => {
-          acc[id] = temperature;
-          return acc;
-        }, {});
-        setWeatherData(weatherMap);
-      } catch (error) {
-        console.error("Error processing weather data:", error);
-      } finally {
-        setLoading(false);
+      } else {
+        // If coordinates property is missing, set temperature to null
+        setWeatherData((prevData) => ({
+          ...prevData,
+          [location.id]: null,
+        }));
       }
-    };
-
-    fetchWeatherData();
+    });
   }, [favoriteArr]);
 
   return (
@@ -96,13 +58,6 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
         }}
       >
         <h1 style={{ flex: 1 }}>Your Favorites</h1>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            position: "relative",
-          }}
-        ></div>
       </div>
       <div
         style={{
@@ -122,7 +77,12 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                 style={{ height: "250px", width: "350px" }}
                 alt={"image of " + location.name}
               />
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
                 <h5>{location.name}</h5>
                 <button onClick={() => deleteItem(location.id)}>🗑️</button>
               </div>
@@ -130,18 +90,13 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                 <em style={{ fontStyle: "italic" }}>{location.type}</em>
               </h6>
               <p>{location.budgetStyle}</p>
-              {loading ? (
-                <p>Loading temperature data...</p>
-              ) : location.coordinates ? (
-                <p>
-                  Current Temperature:{" "}
-                  {weatherData[location.id] !== undefined
-                    ? `${weatherData[location.id]} °C`
-                    : "Data unavailable"}
-                </p>
-              ) : (
-                <p>No temperature data available</p>
-              )}
+              <p>
+                Current Temperature:{" "}
+                {weatherData[location.id] !== undefined &&
+                weatherData[location.id] !== null
+                  ? `${weatherData[location.id]} °C`
+                  : "Temperature unavailable"}
+              </p>
             </div>
           </div>
         ))}
