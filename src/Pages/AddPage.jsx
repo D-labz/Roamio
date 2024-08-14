@@ -156,7 +156,6 @@ export default function AddPage({ createLocation }) {
               onChange={handleFoodChange}
             />
           </div>
-
           <div className="input-wrapper-add">
             <button className="add-save" type="submit" onClick={handleSubmit}>
               Submit

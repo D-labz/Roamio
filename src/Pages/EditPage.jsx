@@ -160,7 +160,6 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleFoodChange}
             />
           </div>
-
           <div className="input-wrapper-add">
             <button className="add-save" type="submit" onClick={handleSubmit}>
               Edit
