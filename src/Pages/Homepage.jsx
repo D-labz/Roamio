@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Filter from "../components/Filter";
 
-export default function Homepage() {
+export default function Homepage({ locations }) {
   const navigate = useNavigate();
-  const [locations, setLocations] = useState([]);
+  // const [locations, setLocations] = useState([]);
   const [filter, setFilter] = useState("All");
 
-  useEffect(() => {
+  /*   useEffect(() => {
     fetch("https://roamio.adaptable.app/locations")
       .then((response) => response.json())
       .then((data) => {
@@ -15,7 +15,7 @@ export default function Homepage() {
         setLocations(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, []); */
 
   const handleNavigate = () => {
     navigate("/add");

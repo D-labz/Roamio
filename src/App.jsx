@@ -26,6 +26,7 @@ function App() {
 
   useEffect(() => {
     axios.get(apiURL).then((response) => {
+      console.log(response);
       setLocations(response.data);
       setFetching(false);
     });
@@ -34,7 +35,7 @@ function App() {
   const createLocation = (newLocation) => {
     setLocations([...locations, newLocation]);
   };
-
+  if (fetching) return <h1>loading</h1>;
   return (
     <>
       <Sidebar />
