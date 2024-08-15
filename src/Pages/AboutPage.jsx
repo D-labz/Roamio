@@ -2,6 +2,7 @@ import React from "react";
 import Costa from "../assets/Costa.webp";
 import Destin from "../assets/Destin.jpeg";
 import Pokhara from "../assets/Pokhara.jpg";
+import github from "../assets/github.png";
 import "./AboutPage.css";
 
 export default function AboutPage() {
@@ -17,7 +18,10 @@ export default function AboutPage() {
             <img src={Destin} alt="Destin" width={100} height="auto" />
             <div class="text-content">
               <h3 class="heading">Peter Woods</h3>
-              <p class="paragraph">My favorite place is Destin, Florida</p>
+              <p class="paragraph">My favorite place is Destin, Florida.</p>
+              <a href="https://github.com/woodspc" target="_blank">
+                <img src={github} alt="GitHub Logo" />
+              </a>
             </div>
           </div>
         </li>
@@ -32,8 +36,11 @@ export default function AboutPage() {
             <div class="text-content">
               <h3 class="heading">Dmytro Labenskyy</h3>
               <p class="paragraph">
-                My favorite place is Costa da Caparica, Lisbon
+                My favorite place is Costa da Caparica, Lisbon.
               </p>
+              <a href="https://github.com/D-labz" target="_blank">
+                <img src={github} alt="GitHub Logo" />
+              </a>
             </div>
           </div>
         </li>
@@ -42,7 +49,10 @@ export default function AboutPage() {
             <img src={Pokhara} alt="Pokhara" width={100} height="auto" />
             <div class="text-content">
               <h3 class="heading">Prashidhika Neupane</h3>
-              <p class="paragraph">My favorite place is Pokhara.</p>
+              <p class="paragraph">My favorite place is Pokhara, Nepal.</p>
+              <a href="https://github.com/Prashidhika" target="_blank">
+                <img src={github} alt="GitHub Logo" />
+              </a>
             </div>
           </div>
         </li>

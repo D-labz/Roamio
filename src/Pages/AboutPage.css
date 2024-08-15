@@ -10,9 +10,9 @@
 .about-heading {
   font-size: 48px;
   color: #0a2e46;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   position: relative;
-  left: 250px;
+  left: 90px;
 }
 
 .about-subheading {
@@ -118,4 +118,14 @@
   font-size: 18px;
   color: #0a2e46;
   margin: 0;
+}
+
+.text-content a {
+  margin-top: 15px;
+}
+
+.text-content a img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
 }
