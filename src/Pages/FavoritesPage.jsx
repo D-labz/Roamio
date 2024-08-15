@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Homepage.css";
 
 export default function FavoritesPage({ favoriteArr, deleteItem }) {
   const [weatherData, setWeatherData] = useState({});
@@ -48,7 +49,7 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
   }, [favoriteArr]);
 
   return (
-    <div>
+    <div className="favorites">
       <div
         style={{
           display: "flex",
@@ -73,10 +74,14 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
         {favoriteArr.map((location) => (
           <Link to={`/details/${location.id}`}>
             <div key={location.id} style={{ padding: "5px" }}>
-              <div>
+              <div className="favorites-card">
                 <img
                   src={location.img}
-                  style={{ height: "250px", width: "350px" }}
+                  style={{
+                    height: "250px",
+                    width: "350px",
+                    border: "1px solid black",
+                  }}
                   alt={"image of " + location.name}
                 />
                 <div
@@ -86,14 +91,21 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                   }}
                 >
                   <h5>{location.name}</h5>
-                  <button onClick={() => deleteItem(location.id)}>🗑️</button>
+                  <button
+                    className="delete-btn"
+                    onClick={() => deleteItem(location.id)}
+                  >
+                    🗑️
+                  </button>
                 </div>
-                <h6>
-                  <em style={{ fontStyle: "italic" }}>
-                    Destination type: {location.type}
-                  </em>
-                </h6>
-                <p>Budget type: {"$".repeat(location.budgetStyle)}</p>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>Destination Type: </span>
+                  <em>{location.type}</em>
+                </p>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>Budget Type: </span>
+                  {"$".repeat(location.budgetStyle)}
+                </p>
                 <p>
                   {weatherData[location.id] !== undefined &&
                   weatherData[location.id] !== null
