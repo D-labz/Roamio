@@ -38,15 +38,14 @@ export default function AddPage({ createLocation }) {
       description,
       budgetStyle,
       food,
-      coordinates, 
+      coordinates,
     };
 
     axios
       .post("https://roamio.adaptable.app/locations", newLocation)
       .then(function (response) {
-
         createLocation(response.data);
-        
+
         setName("");
         setType("");
         setImg("");
@@ -112,7 +111,9 @@ export default function AddPage({ createLocation }) {
           </div>
           <div className="input-wrapper-add">
             <label>Activities:</label>
-            <input
+            <textarea
+              rows="4"
+              cols="40"
               type="text"
               name="activities"
               value={activities}
@@ -121,8 +122,9 @@ export default function AddPage({ createLocation }) {
           </div>
           <div className="input-wrapper-add">
             <label>Description:</label>
-            <input
-              type="text"
+            <textarea
+              rows="4"
+              cols="40"
               name="description"
               value={description}
               onChange={handleDescriptionChange}
@@ -138,7 +140,7 @@ export default function AddPage({ createLocation }) {
             </select>
           </div>
           <div className="input-wrapper-add">
-            <label>Food:</label>
+            <label>Local Food:</label>
             <input
               type="text"
               name="food"
