@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="about-container">
       <h1 className="about-heading">
-        "Explore the Unseen, Discover the unforgattable"
+        "Explore the Unseen, Discover the Unforgettable"
       </h1>
       <h2 className="about-subheading">Meet our Team</h2>
       <ul className="about-list">

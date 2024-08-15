@@ -69,17 +69,19 @@ export default function DetailsPage({
               {"$".repeat(foundLocation.budgetStyle)}
             </p>
           </div>
-          <p className="details-activities">
-            <span style={{ fontWeight: "bold" }}>Things to do:</span>{" "}
-            {foundLocation.activities}
-          </p>
           <p className="details-description">
             <em>{foundLocation.description}</em>
           </p>
-          <p className="details-food">
-            <span style={{ fontWeight: "bold" }}>Local Food: </span>
-            {foundLocation.food}
-          </p>
+          <div className="details-activities-food">
+            <p className="details-activities">
+              <span style={{ fontWeight: "bold" }}>Things to do:</span>{" "}
+              {foundLocation.activities}
+            </p>
+            <p className="details-food">
+              <span style={{ fontWeight: "bold" }}>Local Food: </span>
+              {foundLocation.food}
+            </p>
+          </div>
           <div details-btns>
             <button className="edit-btn" onClick={handleNavigate}>
               Edit

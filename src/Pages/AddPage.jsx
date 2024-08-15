@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Add.css";
 
 export default function AddPage({ createLocation }) {
   const [name, setName] = useState("");
@@ -63,25 +64,25 @@ export default function AddPage({ createLocation }) {
 
   return (
     <div>
+      <h1 className="page-heading">Add a New Destination!</h1>
       <div
         className="add"
         style={{
-          height: "80vh",
+          height: "60vh",
           width: "50vw",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          // display: "flex",
+          // flexDirection: "column",
+          // justifyContent: "center",
+          // alignItems: "flex-start",
           position: "absolute",
-          top: "20px",
-          left: "250px",
+          top: "15%",
+          left: "18%",
           border: "2px solid black",
           padding: "20px",
         }}
       >
-        <h1 className="page-heading">Add a New Destination!</h1>
-        <form>
-          <div className="input-wrapper-add">
+        <form className="add-form">
+          <div className="add-row">
             <label>Name:</label>
             <input
               type="text"
@@ -90,7 +91,7 @@ export default function AddPage({ createLocation }) {
               onChange={handleNameChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Type:</label>
             <select value={type} onChange={handleTypeChange}>
               <option value="mountains">Mountains</option>
@@ -100,7 +101,7 @@ export default function AddPage({ createLocation }) {
               <option value="beach">Beach</option>
             </select>
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Image URL:</label>
             <input
               type="text"
@@ -109,7 +110,7 @@ export default function AddPage({ createLocation }) {
               onChange={handleImgChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Activities:</label>
             <textarea
               rows="4"
@@ -120,7 +121,7 @@ export default function AddPage({ createLocation }) {
               onChange={handleActivitiesChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Description:</label>
             <textarea
               rows="4"
@@ -130,7 +131,7 @@ export default function AddPage({ createLocation }) {
               onChange={handleDescriptionChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Budget Style:</label>
             <select value={budgetStyle} onChange={handleBudgetStyleChange}>
               <option value="1">$</option>
@@ -139,7 +140,7 @@ export default function AddPage({ createLocation }) {
               <option value="4">$$$$</option>
             </select>
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Local Food:</label>
             <input
               type="text"
@@ -148,7 +149,7 @@ export default function AddPage({ createLocation }) {
               onChange={handleFoodChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="add-row">
             <label>Coordinates:</label>
             <input
               type="text"
@@ -157,8 +158,8 @@ export default function AddPage({ createLocation }) {
               onChange={handleCoordinatesChange}
             />
           </div>
-          <div className="input-wrapper-add">
-            <button className="add-save" type="submit" onClick={handleSubmit}>
+          <div>
+            <button className="add-submit" type="submit" onClick={handleSubmit}>
               Submit
             </button>
           </div>
