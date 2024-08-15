@@ -62,12 +62,14 @@ export default function DetailsPage({
       />
       <p>{foundLocation.name}</p>
       <p>
-        <em style={{ fontStyle: "italic" }}>{foundLocation.type}</em>
+        <em style={{ fontStyle: "italic" }}>
+          Destination type: {foundLocation.type}
+        </em>
       </p>
-      <p>{"$".repeat(foundLocation.budgetStyle)}</p>
-      <p>{foundLocation.activities}</p>
-      <p>{foundLocation.description}</p>
-      <p>{foundLocation.food}</p>
+      <p>Budget type: {"$".repeat(foundLocation.budgetStyle)}</p>
+      <p>Activities: {foundLocation.activities}</p>
+      <p>Description: {foundLocation.description}</p>
+      <p>Local food: {foundLocation.food}</p>
       <button onClick={handleNavigate}>Edit</button>
       <button onClick={handleAddFavourites}>❤️</button>
     </div>

@@ -89,9 +89,11 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                   <button onClick={() => deleteItem(location.id)}>🗑️</button>
                 </div>
                 <h6>
-                  <em style={{ fontStyle: "italic" }}>{location.type}</em>
+                  <em style={{ fontStyle: "italic" }}>
+                    Destination type: {location.type}
+                  </em>
                 </h6>
-                <p>{"$".repeat(location.budgetStyle)}</p>
+                <p>Budget type: {"$".repeat(location.budgetStyle)}</p>
                 <p>
                   {weatherData[location.id] !== undefined &&
                   weatherData[location.id] !== null
