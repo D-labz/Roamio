@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import "./Edit.css";
 
 export default function EditPage({ locations, updateLocation, setLocations }) {
   const { locationId } = useParams();
@@ -78,11 +79,12 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
 
   return (
     <div>
+      <h1 className="page-heading">EDIT THIS LOCATION!</h1>
       <div
         className="edit"
         style={{
-          height: "80vh",
-          width: "50vw",
+          height: "70vh",
+          width: "40vw",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -91,12 +93,10 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
           top: "20px",
           left: "250px",
           border: "2px solid black",
-          padding: "20px",
         }}
       >
-        <h1 className="page-heading">EDIT THIS LOCATION!</h1>
-        <form>
-          <div className="input-wrapper-add">
+        <form className="edit-form">
+          <div className="edit-row">
             <label>Name:</label>
             <input
               type="text"
@@ -105,7 +105,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleNameChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Type:</label>
             <select value={type} onChange={handleTypeChange}>
               <option value="mountains">Mountains</option>
@@ -115,7 +115,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               <option value="beach">Beach</option>
             </select>
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Image URL:</label>
             <input
               type="text"
@@ -124,7 +124,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleImgChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Activities:</label>
             <textarea
               rows="4"
@@ -135,7 +135,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleActivitiesChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Description:</label>
             <textarea
               rows="4"
@@ -146,7 +146,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleDescriptionChange}
             />
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Budget Style:</label>
             <select value={budgetStyle} onChange={handleBudgetStyleChange}>
               <option value="1">$</option>
@@ -155,7 +155,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               <option value="4">$$$$</option>
             </select>
           </div>
-          <div className="input-wrapper-add">
+          <div className="edit-row">
             <label>Local Food:</label>
             <input
               type="text"
@@ -164,8 +164,12 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
               onChange={handleFoodChange}
             />
           </div>
-          <div className="input-wrapper-add">
-            <button className="add-save" type="submit" onClick={handleSubmit}>
+          <div>
+            <button
+              className="edit-submit"
+              type="submit"
+              onClick={handleSubmit}
+            >
               Edit
             </button>
           </div>

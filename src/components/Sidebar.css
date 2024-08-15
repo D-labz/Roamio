@@ -1,19 +1,17 @@
-/* Sidebar container */
 #sidebar {
   width: 180px;
   height: 100vh;
-  background-color: #2c3e50; /* Dark blue-gray */
-  padding: 20px 0; /* Adjusted padding */
+  background-color: #2c3e50;
+  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Pushes content to top and bottom */
+  justify-content: space-between;
 }
 
-/* List container */
 .side-items {
   list-style-type: none;
   padding: 0;
@@ -21,54 +19,47 @@
   width: 100%;
 }
 
-/* NavLink styles */
 .side-items a {
   display: block;
   width: 100%;
-  padding: 15px 0; /* Removed horizontal padding */
+  padding: 15px 0;
   margin-bottom: 10px;
   text-decoration: none;
-  color: #ecf0f1; /* Light gray */
+  color: #ecf0f1;
   font-size: 18px;
   font-weight: 500;
-  text-align: center; /* Center-align text */
+  text-align: center;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-/* Active link */
 .side-items a.active {
-  background-color: #2980b9; /* Medium blue */
-  color: #ffffff; /* White */
+  background-color: #2980b9;
+  color: #ffffff;
 }
 
-/* Hover effect */
 .side-items a:hover {
-  background-color: #34495e; /* Darker blue-gray */
-  color: #ffffff; /* White */
+  background-color: #34495e;
+  color: #ffffff;
 }
 
-/* Bottom section for quiz and GitHub logos */
 .bottom-section {
   display: flex;
-  justify-content: center; /* Center the items */
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 10px 0;
-  /* Reduced padding */
 }
 
-/* Style for logos */
 .bottom-section img {
-  width: 40px; /* Adjusted size */
+  width: 40px;
   height: 40px;
 
-  margin: 0 15px; /* Reduced margin between images */
+  margin: 0 15px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-/* Optional: Styling for the GitHub link */
 .bottom-section a {
   text-decoration: none;
 }
