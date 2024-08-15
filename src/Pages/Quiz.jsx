@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./Quiz.css"; // Ensure this path is correct
+import "./Quiz.css";
 
 const Quiz = () => {
-  // Sample quiz data
   const questions = [
     {
       questionText: "In which country are the world 10 coldest cities located?",
@@ -49,7 +48,7 @@ const Quiz = () => {
       setTimeout(() => {
         setCurrentQuestion(nextQuestion);
         setSelectedOption(null);
-      }, 1000); // Delay to show feedback
+      }, 1000);
     } else {
       setShowScore(true);
     }
