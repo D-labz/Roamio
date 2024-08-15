@@ -1,6 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function FavoritesPage({ favoriteArr, deleteItem }) {
+  const [weatherData, setWeatherData] = useState({});
+
+  useEffect(() => {
+    favoriteArr.forEach((location) => {
+      // Check if coordinates property exists and is valid
+      if (location.coordinates) {
+        const [latitudeString, longitudeString] =
+          location.coordinates.split(", ");
+        const latitude = parseFloat(latitudeString);
+        const longitude = parseFloat(longitudeString);
+
+        if (!isNaN(latitude) && !isNaN(longitude)) {
+          const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m&timezone=auto&forecast_days=1`;
+
+          axios
+            .get(apiUrl)
+            .then((response) => {
+              setWeatherData((prevData) => ({
+                ...prevData,
+                [location.id]: response.data.current.temperature_2m,
+              }));
+            })
+            .catch(() => {
+              setWeatherData((prevData) => ({
+                ...prevData,
+                [location.id]: null,
+              }));
+            });
+        } else {
+          setWeatherData((prevData) => ({
+            ...prevData,
+            [location.id]: null,
+          }));
+        }
+      } else {
+        // If coordinates property is missing, set temperature to null
+        setWeatherData((prevData) => ({
+          ...prevData,
+          [location.id]: null,
+        }));
+      }
+    });
+  }, [favoriteArr]);
+
   return (
     <div>
       <div
@@ -13,13 +58,6 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
         }}
       >
         <h1 style={{ flex: 1 }}>Your Favorites</h1>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            position: "relative",
-          }}
-        ></div>
       </div>
       <div
         style={{
@@ -31,15 +69,20 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
           marginLeft: "230px",
         }}
       >
-        {favoriteArr.map((location, i) => (
-          <div key={i} style={{ padding: "5px" }}>
+        {favoriteArr.map((location) => (
+          <div key={location.id} style={{ padding: "5px" }}>
             <div>
               <img
                 src={location.img}
                 style={{ height: "250px", width: "350px" }}
                 alt={"image of " + location.name}
               />
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
                 <h5>{location.name}</h5>
                 <button onClick={() => deleteItem(location.id)}>🗑️</button>
               </div>
@@ -47,6 +90,12 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                 <em style={{ fontStyle: "italic" }}>{location.type}</em>
               </h6>
               <p>{location.budgetStyle}</p>
+              <p>
+                {weatherData[location.id] !== undefined &&
+                weatherData[location.id] !== null
+                  ? `Current Temperature: ${weatherData[location.id]} °C`
+                  : "Temperature unavailable"}
+              </p>
             </div>
           </div>
         ))}

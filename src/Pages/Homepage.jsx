@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Filter from "../components/Filter";
-
 export default function Homepage({ locations }) {
   const navigate = useNavigate();
   const [filter, setFilter] = useState("All");
-
   const handleNavigate = () => {
     navigate("/add");
   };
-
   const filteredLocations = locations.filter((location) => {
     if (filter === "All") return true;
     return location.type === filter;
   });
-
   return (
-    <div>
+    <div
+      style={{ backgroundColor: "beige", width: "98.8vw", height: "4000px" }}
+    >
       <div
         style={{
           display: "flex",
@@ -26,7 +24,7 @@ export default function Homepage({ locations }) {
           marginRight: "100px",
         }}
       >
-        <h1 style={{ flex: 1 }}>Destinations</h1>
+        <h1 style={{ flex: 1, margin: "10px" }}>Destinations</h1>
         <div
           style={{
             display: "flex",
@@ -51,25 +49,29 @@ export default function Homepage({ locations }) {
           flexWrap: "wrap",
           height: "100vh",
           width: "calc(100vw - 250px)",
-          marginLeft: "230px",
+          marginLeft: "205px",
         }}
       >
         {filteredLocations.length > 0 ? (
           filteredLocations.map((location, i) => (
-            <div key={i} style={{ padding: "5px" }}>
+            <div key={i}>
               <Link to={`/details/${location.id}`}>
-                <div>
+                <div style={cardStyle}>
                   <div>
                     <img
                       src={location.img}
                       style={{ height: "250px", width: "350px" }}
                       alt={"image of " + location.name}
                     />
-                    <h5>{location.name}</h5>
+                    <h3 style={{ paddingLeft: "10px" }}>{location.name}</h3>
                     <h6>
-                      <em style={{ fontStyle: "italic" }}>{location.type}</em>
+                      <em style={{ paddingLeft: "10px", fontStyle: "italic" }}>
+                        {location.type}
+                      </em>
                     </h6>
-                    <p>{location.budgetStyle}</p>
+                    <p style={{ paddingLeft: "10px" }}>
+                      {location.budgetStyle}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -82,3 +84,10 @@ export default function Homepage({ locations }) {
     </div>
   );
 }
+let cardStyle = {
+  border: "1px solid black",
+  margin: "5px",
+  background: "lightBlue",
+  boxShadow: "-2px 2px 5px black",
+  color: "black",
+};

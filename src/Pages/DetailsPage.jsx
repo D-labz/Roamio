@@ -61,7 +61,7 @@ export default function DetailsPage({
       <p>{foundLocation.description}</p>
       <p>{foundLocation.food}</p>
       <button onClick={handleNavigate}>Edit</button>
-      <button onClick={handleAddFavourites}>:heart:</button>
+      <button onClick={handleAddFavourites}>❤️</button>
     </div>
   );
 }
