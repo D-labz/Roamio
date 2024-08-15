@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Pages/Homepage.css";
 
 export default function Filter({ filter, setFilter }) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -23,7 +24,11 @@ export default function Filter({ filter, setFilter }) {
 
   return (
     <div style={{ position: "relative" }}>
-      <button onClick={toggleDropdown} style={{ padding: "10px 20px" }}>
+      <button
+        className="filter-btn"
+        onClick={toggleDropdown}
+        style={{ padding: "10px 20px" }}
+      >
         Filter
       </button>
       {showDropdown && (
@@ -42,9 +47,9 @@ export default function Filter({ filter, setFilter }) {
         >
           {filterOptions.map((option) => (
             <button
+              className="drop-down"
               key={option}
               onClick={() => applyFilter(option)}
-              style={dropdownButtonStyle}
             >
               {option}
             </button>
@@ -54,18 +59,3 @@ export default function Filter({ filter, setFilter }) {
     </div>
   );
 }
-
-const dropdownButtonStyle = {
-  padding: "10px 15px",
-  width: "100%",
-  textAlign: "left",
-  backgroundColor: "white",
-  border: "none",
-  cursor: "pointer",
-  borderBottom: "1px solid lightgray",
-};
-
-// Adding hover style
-dropdownButtonStyle[":hover"] = {
-  backgroundColor: "#f0f0f0",
-};
