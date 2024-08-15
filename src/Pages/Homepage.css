@@ -29,14 +29,14 @@ body {
 .details-box {
   background-color: powderblue;
   width: 60vw;
-  height: 100vh;
+  height: 110vh;
   margin-left: 6%;
 }
 
 .details-box img {
   margin-top: 40px;
   height: 350px;
-  width: auto;
+  width: 700px;
   border: 1px solid black;
 }
 
@@ -48,9 +48,14 @@ body {
   margin-bottom: -15px;
 }
 
-.details-activities {
+.details-activities-food {
   width: 75%;
-  margin-bottom: -5px;
+  padding: 0;
+  margin: 5px 0 5px -90px;
+}
+
+.details-activities {
+  margin-bottom: -15px;
 }
 
 .details-heading {
@@ -58,14 +63,13 @@ body {
   display: flex;
   justify-content: space-around;
   width: 70%;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
 }
 
 .details-description {
   font-size: 13px;
   width: 80%;
   font-weight: bold;
-  margin-bottom: -10px;
 }
 
 .details-box p {
