@@ -135,12 +135,12 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
           </div>
           <div className="input-wrapper-add">
             <label>Description:</label>
-            <input
+            <textarea
               type="text"
               name="description"
               value={description}
               onChange={handleDescriptionChange}
-            />
+            ></textarea>
           </div>
           <div className="input-wrapper-add">
             <label>Budget Style:</label>

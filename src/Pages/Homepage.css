@@ -1,0 +1,115 @@
+body {
+  background-color: beige;
+}
+
+.card-style:hover {
+  border: 2px solid black;
+  box-shadow: -5px 5px 20px white;
+  margin: 4px;
+}
+
+.card-style {
+  border: 1px solid black;
+  margin: 5px;
+  background: lightBlue;
+  box-shadow: -2px 2px 5px black;
+  color: black;
+}
+
+.add-btn {
+  border: 2px solid black;
+  color: white;
+  background-color: #642f1d;
+}
+
+.details-page {
+  height: 700px;
+}
+
+.details-box {
+  background-color: powderblue;
+  width: 60vw;
+  height: 100vh;
+  margin-left: 6%;
+}
+
+.details-box img {
+  margin-top: 40px;
+  height: 350px;
+  width: auto;
+  border: 1px solid black;
+}
+
+.details-location-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.details-activities {
+  width: 75%;
+  margin-bottom: -5px;
+}
+
+.details-heading {
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin-bottom: -20px;
+}
+
+.details-description {
+  font-size: 13px;
+  width: 80%;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.details-box p {
+  padding: 0;
+}
+
+.details-box p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.details-btns {
+  -top: 10px;
+}
+
+.edit-btn {
+  border: 2px solid black;
+  color: white;
+  background-color: #642f1d;
+  margin-bottom: 5px;
+}
+
+.heart-btn {
+  border: none;
+  background-color: powderblue;
+}
+
+.drop-down {
+  border: 2px solid black;
+  color: white;
+  background-color: #642f1d;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  background-color: #f0f0f0;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid lightgray;
+}
+
+.drop-down:hover {
+  background-color: white;
+}
+
+.filter-btn {
+  border: 2px solid black;
+  color: white;
+  background-color: #642f1d;
+}

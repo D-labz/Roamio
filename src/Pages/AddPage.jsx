@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Homepage.css";
 
 export default function AddPage({ createLocation }) {
   const [name, setName] = useState("");
@@ -38,15 +39,14 @@ export default function AddPage({ createLocation }) {
       description,
       budgetStyle,
       food,
-      coordinates, 
+      coordinates,
     };
 
     axios
       .post("https://roamio.adaptable.app/locations", newLocation)
       .then(function (response) {
-
         createLocation(response.data);
-        
+
         setName("");
         setType("");
         setImg("");
