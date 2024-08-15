@@ -126,7 +126,9 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
           </div>
           <div className="input-wrapper-add">
             <label>Activities:</label>
-            <input
+            <textarea
+              rows="4"
+              cols="40"
               type="text"
               name="activities"
               value={activities}
@@ -136,6 +138,8 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
           <div className="input-wrapper-add">
             <label>Description:</label>
             <textarea
+              rows="4"
+              cols="40"
               type="text"
               name="description"
               value={description}
@@ -152,7 +156,7 @@ export default function EditPage({ locations, updateLocation, setLocations }) {
             </select>
           </div>
           <div className="input-wrapper-add">
-            <label>Food:</label>
+            <label>Local Food:</label>
             <input
               type="text"
               name="food"
