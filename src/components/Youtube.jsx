@@ -40,9 +40,10 @@ const YouTubeSearch = ({ destination }) => {
   return (
     <div>
       <iframe
+        style={{ position: "absolute", bottom: "-80%", left: "28%" }}
         id="youtube-iframe"
-        width="560"
-        height="315"
+        width="760"
+        height="400"
         src=""
         title="YouTube video player"
         frameBorder="0"
