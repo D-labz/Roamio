@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Filter from "../components/Filter";
+import "./Homepage.css";
 export default function Homepage({ locations }) {
   const navigate = useNavigate();
   const [filter, setFilter] = useState("All");
@@ -56,7 +57,7 @@ export default function Homepage({ locations }) {
           filteredLocations.map((location, i) => (
             <div key={i}>
               <Link to={`/details/${location.id}`}>
-                <div style={cardStyle}>
+                <div className="card-style">
                   <div>
                     <img
                       src={location.img}
@@ -84,10 +85,3 @@ export default function Homepage({ locations }) {
     </div>
   );
 }
-let cardStyle = {
-  border: "1px solid black",
-  margin: "5px",
-  background: "lightBlue",
-  boxShadow: "-2px 2px 5px black",
-  color: "black",
-};
