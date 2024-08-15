@@ -24,7 +24,7 @@ export default function Homepage({ locations }) {
           marginRight: "100px",
         }}
       >
-        <h1 style={{ flex: 1, margin: "10px" }}>Destinations</h1>
+        <h1 style={{ flex: 1, margin: "10px" }}>Travel Destinations</h1>
         <div
           style={{
             display: "flex",
@@ -66,11 +66,11 @@ export default function Homepage({ locations }) {
                     <h3 style={{ paddingLeft: "10px" }}>{location.name}</h3>
                     <h6>
                       <em style={{ paddingLeft: "10px", fontStyle: "italic" }}>
-                        {location.type}
+                        Destination type: {location.type}
                       </em>
                     </h6>
                     <p style={{ paddingLeft: "10px" }}>
-                      {location.budgetStyle}
+                      Budget type: {"$".repeat(location.budgetStyle)}
                     </p>
                   </div>
                 </div>

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Navigate,
-  useParams,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { Navigate, useParams, useNavigate } from "react-router-dom";
 
 export default function DetailsPage({
   locations,
@@ -12,24 +7,37 @@ export default function DetailsPage({
   setFavoriteArr,
 }) {
   const { locationId } = useParams();
-
-  const handleAddFavourites = () => {
-    setFavoriteArr([...favoriteArr, foundLocation]);
-
-    navigate("/FavoritesPage");
-  };
+  const navigate = useNavigate();
 
   const foundLocation = locations.find(
     (location) => location.id === parseInt(locationId)
   );
 
-  if (!foundLocation) {
-    return <Navigate to="/" />;
-  }
-  const navigate = useNavigate();
+  const handleAddFavourites = () => {
+    let isAlreadyFavorite = false;
+
+    favoriteArr.forEach((favorite) => {
+      if (favorite.id === foundLocation.id) {
+        isAlreadyFavorite = true;
+      }
+    });
+
+    if (isAlreadyFavorite) {
+      alert("That destination already exists in favorites");
+    } else {
+      setFavoriteArr([...favoriteArr, foundLocation]);
+      navigate("/FavoritesPage");
+    }
+  };
+
   const handleNavigate = () => {
     navigate(`/edit/${foundLocation.id}`);
   };
+
+  if (!foundLocation) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div
       style={{
@@ -50,16 +58,18 @@ export default function DetailsPage({
           height: "500px",
           width: "600px",
         }}
-        alt={`image of" + ${foundLocation.name}`}
+        alt={`image of ${foundLocation.name}`}
       />
       <p>{foundLocation.name}</p>
       <p>
-        <em style={{ fontstyle: "italics" }}>{foundLocation.type}</em>
+        <em style={{ fontStyle: "italic" }}>
+          Destination type: {foundLocation.type}
+        </em>
       </p>
-      <p>{foundLocation.budgetStyle}</p>
-      <p>{foundLocation.activities}</p>
-      <p>{foundLocation.description}</p>
-      <p>{foundLocation.food}</p>
+      <p>Budget type: {"$".repeat(foundLocation.budgetStyle)}</p>
+      <p>Activities: {foundLocation.activities}</p>
+      <p>Description: {foundLocation.description}</p>
+      <p>Local food: {foundLocation.food}</p>
       <button onClick={handleNavigate}>Edit</button>
       <button onClick={handleAddFavourites}>❤️</button>
     </div>
