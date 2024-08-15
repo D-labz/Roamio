@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import github from "../assets/github.png";
+import Quiz from "../assets/Quiz.png";
 
 const Sidebar = () => {
   return (
-    <nav className="body" id="sidebar">
+    <nav id="sidebar">
       <ul className="side-items">
         <NavLink
           to="/"
@@ -27,12 +28,16 @@ const Sidebar = () => {
           About Us
         </NavLink>
       </ul>
-      <div className="logo">
+      <div className="bottom-section">
         <a href="https://github.com/D-labz/Roamio" target="_blank">
-          <img src={github} alt="Logo" />
+          <img src={github} alt="GitHub Logo" />
         </a>
+        <NavLink to="/quiz">
+          <img src={Quiz} alt="Quiz Logo" />
+        </NavLink>
       </div>
     </nav>
   );
 };
+
 export default Sidebar;

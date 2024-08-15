@@ -10,6 +10,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import FavoritesPage from "./Pages/FavoritesPage";
 import Homepage from "./Pages/Homepage";
 import AboutPage from "./Pages/AboutPage";
+import Quiz from "./Pages/Quiz";
 
 // Components
 import Sidebar from "./components/Sidebar";
@@ -72,6 +73,7 @@ function App() {
             <FavoritesPage favoriteArr={favoriteArr} deleteItem={deleteItem} />
           }
         />
+        <Route path="/quiz" element={<Quiz />} /> {/* Quiz route */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
