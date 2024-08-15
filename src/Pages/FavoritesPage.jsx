@@ -91,10 +91,9 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
               </h6>
               <p>{location.budgetStyle}</p>
               <p>
-                Current Temperature:{" "}
                 {weatherData[location.id] !== undefined &&
                 weatherData[location.id] !== null
-                  ? `${weatherData[location.id]} °C`
+                  ? `Current Temperature: ${weatherData[location.id]} °C`
                   : "Temperature unavailable"}
               </p>
             </div>
