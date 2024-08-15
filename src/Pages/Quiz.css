@@ -1,0 +1,84 @@
+/* Global styles for body to set light cream background color */
+body {
+  background-color: #f8f4e6; /* Light cream color for the whole page */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.quiz-content {
+  background-color: #ffffff; /* White background for quiz content */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Limit the width of the quiz container */
+}
+
+.quiz-question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-option-button {
+  background-color: #ffffff; /* White background for option buttons */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 20px; /* Oval shape for buttons */
+  padding: 12px 20px; /* Increased padding for a more prominent button */
+  margin: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+  text-align: center;
+}
+
+.quiz-option-button:hover {
+  background-color: #e0e0e0; /* Slightly darker white on hover */
+}
+
+.quiz-option-button.correct {
+  background-color: #d4edda; /* Light green for correct answers */
+  border-color: #c3e6cb; /* Darker green border for correct answers */
+}
+
+.quiz-option-button.incorrect {
+  background-color: #f8d7da; /* Light red for incorrect answers */
+  border-color: #f5c6cb; /* Darker red border for incorrect answers */
+}
+
+.quiz-score {
+  text-align: center;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.restart-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}

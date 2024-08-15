@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Pushes content to top and bottom */
 }
 
 /* List container */
@@ -31,7 +31,7 @@
   color: #ecf0f1; /* Light gray */
   font-size: 18px;
   font-weight: 500;
-  text-align: center; /* Align text to the left */
+  text-align: center; /* Center-align text */
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -48,13 +48,27 @@
   color: #ffffff; /* White */
 }
 
-.logo {
-  padding: 20px 0;
-  text-align: center;
+/* Bottom section for quiz and GitHub logos */
+.bottom-section {
+  display: flex;
+  justify-content: center; /* Center the items */
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  /* Reduced padding */
 }
 
-.logo img {
-  max-width: 25%;
-  height: auto;
-  margin-top: auto; /*push the logo to bottom */
+/* Style for logos */
+.bottom-section img {
+  width: 40px; /* Adjusted size */
+  height: 40px;
+
+  margin: 0 15px; /* Reduced margin between images */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Optional: Styling for the GitHub link */
+.bottom-section a {
+  text-decoration: none;
 }
