@@ -70,7 +70,7 @@ export default function Homepage({ locations }) {
                       </em>
                     </h6>
                     <p style={{ paddingLeft: "10px" }}>
-                      {location.budgetStyle}
+                      {"$".repeat(location.budgetStyle)}
                     </p>
                   </div>
                 </div>

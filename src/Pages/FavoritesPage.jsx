@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function FavoritesPage({ favoriteArr, deleteItem }) {
   const [weatherData, setWeatherData] = useState({});
@@ -70,34 +71,36 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
         }}
       >
         {favoriteArr.map((location) => (
-          <div key={location.id} style={{ padding: "5px" }}>
-            <div>
-              <img
-                src={location.img}
-                style={{ height: "250px", width: "350px" }}
-                alt={"image of " + location.name}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                <h5>{location.name}</h5>
-                <button onClick={() => deleteItem(location.id)}>🗑️</button>
+          <Link to={`/details/${location.id}`}>
+            <div key={location.id} style={{ padding: "5px" }}>
+              <div>
+                <img
+                  src={location.img}
+                  style={{ height: "250px", width: "350px" }}
+                  alt={"image of " + location.name}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h5>{location.name}</h5>
+                  <button onClick={() => deleteItem(location.id)}>🗑️</button>
+                </div>
+                <h6>
+                  <em style={{ fontStyle: "italic" }}>{location.type}</em>
+                </h6>
+                <p>{"$".repeat(location.budgetStyle)}</p>
+                <p>
+                  {weatherData[location.id] !== undefined &&
+                  weatherData[location.id] !== null
+                    ? `Current Temperature: ${weatherData[location.id]} °C`
+                    : "Temperature unavailable"}
+                </p>
               </div>
-              <h6>
-                <em style={{ fontStyle: "italic" }}>{location.type}</em>
-              </h6>
-              <p>{location.budgetStyle}</p>
-              <p>
-                {weatherData[location.id] !== undefined &&
-                weatherData[location.id] !== null
-                  ? `Current Temperature: ${weatherData[location.id]} °C`
-                  : "Temperature unavailable"}
-              </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

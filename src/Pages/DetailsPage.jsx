@@ -64,7 +64,7 @@ export default function DetailsPage({
       <p>
         <em style={{ fontStyle: "italic" }}>{foundLocation.type}</em>
       </p>
-      <p>{foundLocation.budgetStyle}</p>
+      <p>{"$".repeat(foundLocation.budgetStyle)}</p>
       <p>{foundLocation.activities}</p>
       <p>{foundLocation.description}</p>
       <p>{foundLocation.food}</p>
