@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, useParams, useNavigate } from "react-router-dom";
+import Youtube from "../components/Youtube";
 
 export default function DetailsPage({
   locations,
@@ -70,6 +71,7 @@ export default function DetailsPage({
       <p>Activities: {foundLocation.activities}</p>
       <p>Description: {foundLocation.description}</p>
       <p>Local food: {foundLocation.food}</p>
+      <Youtube destination={foundLocation.name} />
       <button onClick={handleNavigate}>Edit</button>
       <button onClick={handleAddFavourites}>❤️</button>
     </div>
