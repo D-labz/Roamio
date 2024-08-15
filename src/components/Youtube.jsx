@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const YouTubeSearch = ({ destination }) => {
-  const API_KEY = "AIzaSyA6BvF7zJb77DB38lpjohVOo8krz4z9WL8";
-
   useEffect(() => {
     if (destination) {
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(
             destination
-          )}&key=${API_KEY}`
+          )}&key=${import.meta.env.VITE_API_KEY}`
         )
         .then((response) => {
           const videoId =
