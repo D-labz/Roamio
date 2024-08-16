@@ -93,7 +93,11 @@ export default function FavoritesPage({ favoriteArr, deleteItem }) {
                   <h5>{location.name}</h5>
                   <button
                     className="delete-btn"
-                    onClick={() => deleteItem(location.id)}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      deleteItem(location.id);
+                    }}
                   >
                     🗑️
                   </button>

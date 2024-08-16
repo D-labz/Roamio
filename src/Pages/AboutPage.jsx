@@ -16,9 +16,9 @@ export default function AboutPage() {
         <li>
           <div className="about-box">
             <img src={Destin} alt="Destin" width={100} height="auto" />
-            <div class="text-content">
-              <h3 class="heading">Peter Woods</h3>
-              <p class="paragraph">My favorite place is Destin, Florida.</p>
+            <div className="text-content">
+              <h3 className="heading">Peter Woods</h3>
+              <p className="paragraph">My favorite place is Destin, Florida.</p>
               <a href="https://github.com/woodspc" target="_blank">
                 <img src={github} alt="GitHub Logo" />
               </a>
@@ -33,9 +33,9 @@ export default function AboutPage() {
               width={100}
               height="auto"
             />
-            <div class="text-content">
-              <h3 class="heading">Dmytro Labenskyy</h3>
-              <p class="paragraph">
+            <div className="text-content">
+              <h3 className="heading">Dmytro Labenskyy</h3>
+              <p className="paragraph">
                 My favorite place is Costa da Caparica, Lisbon.
               </p>
               <a href="https://github.com/D-labz" target="_blank">
@@ -47,9 +47,9 @@ export default function AboutPage() {
         <li>
           <div className="about-box">
             <img src={Pokhara} alt="Pokhara" width={100} height="auto" />
-            <div class="text-content">
-              <h3 class="heading">Prashidhika Neupane</h3>
-              <p class="paragraph">My favorite place is Pokhara, Nepal.</p>
+            <div className="text-content">
+              <h3 className="heading">Prashidhika Neupane</h3>
+              <p className="paragraph">My favorite place is Pokhara, Nepal.</p>
               <a href="https://github.com/Prashidhika" target="_blank">
                 <img src={github} alt="GitHub Logo" />
               </a>
